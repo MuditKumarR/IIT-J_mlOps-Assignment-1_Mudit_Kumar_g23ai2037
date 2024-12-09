@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boston Housing Price Prediction</title>
+</head>
+<body>
+    <h1>Boston Housing Price Prediction</h1>
+    <form method="POST">
+        <label for="CRIM">CRIM:</label>
+        <input type="number" name="CRIM" required><br><br>
+        <label for="ZN">ZN:</label>
+        <input type="number" name="ZN" required><br><br>
+        <label for="INDUS">INDUS:</label>
+        <input type="number" name="INDUS" required><br><br>
+        <label for="CHAS">CHAS:</label>
+        <input type="number" name="CHAS" required><br><br>
+        <label for="NOX">NOX:</label>
+        <input type="number" name="NOX" required><br><br>
+        <label for="RM">RM:</label>
+        <input type="number" name="RM" required><br><br>
+        <label for="AGE">AGE:</label>
+        <input type="number" name="AGE" required><br><br>
+        <label for="DIS">DIS:</label>
+        <input type="number" name="DIS" required><br><br>
+        <label for="RAD">RAD:</label>
+        <input type="number" name="RAD" required><br><br>
+        <label for="TAX">TAX:</label>
+        <input type="number" name="TAX" required><br><br>
+        <label for="PT">PT:</label>
+        <input type="number" name="PT" required><br><br>
+        <label for="B">B:</label>
+        <input type="number" name="B" required><br><br>
+        <label for="LSTAT">LSTAT:</label>
+        <input type="number" name="LSTAT" required><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Predicted MV: {{ prediction|round(2) }}</h2>
+    {% endif %}
+</body>
+</html>
